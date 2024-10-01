@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    ignore:
+      - dependency-name: 'eslint'
+      - dependency-name: '@types/eslint'
+      - dependency-name: '@typescript-eslint/eslint-plugin'
+      - dependency-name: '@typescript-eslint/parser'
+      - dependency-name: 'lefthook'
+    groups:
+      dependencies:
+        patterns:
+          - '*'

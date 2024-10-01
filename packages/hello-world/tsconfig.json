@@ -1,0 +1,9 @@
+{
+  "extends": "@web-components-monorepo-starter/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

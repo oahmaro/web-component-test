@@ -1,0 +1,52 @@
+{
+  "name": "@web-components-monorepo-starter/hello-world",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A web component with TypeScript and Lit",
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "typescript",
+    "lit"
+  ],
+  "type": "module",
+  "main": "dist/hello-world.js",
+  "module": "dist/hello-world.js",
+  "types": "dist/hello-world.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "analyze": "custom-elements-manifest analyze --litelement --globs \"src/**/*.ts\" --outdir dist",
+    "analyze:watch": "custom-elements-manifest analyze --litelement --globs \"src/**/*.ts\" --outdir dist --watch",
+    "build": "tsc --project tsconfig.build.json && npm run analyze",
+    "clean": "rimraf dist",
+    "lint": "npm run lint:lit-analyzer && npm run lint:stylelint && npm run lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint --fix .",
+    "lint:fix": "npm run lint:stylelint:fix && npm run lint:eslint:fix",
+    "lint:lit-analyzer": "lit-analyzer",
+    "lint:stylelint": "stylelint src",
+    "lint:stylelint:fix": "stylelint --fix src",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "type-check": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/eslint": "^8.56.5",
+    "@web-components-monorepo-starter/base-configs": "*",
+    "@web-components-monorepo-starter/eslint-config": "*",
+    "eslint": "^8.57.0",
+    "jsdom": "^24.0.0",
+    "lit-analyzer": "^2.0.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.3"
+  },
+  "customElements": "dist/custom-elements.json"
+}

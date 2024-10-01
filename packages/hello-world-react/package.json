@@ -1,0 +1,41 @@
+{
+  "name": "@web-components-monorepo-starter/hello-world-react",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A React component with TypeScript and Lit",
+  "keywords": [
+    "react",
+    "web-components",
+    "typescript",
+    "lit"
+  ],
+  "type": "module",
+  "main": "dist/hello-world.js",
+  "module": "dist/hello-world.js",
+  "types": "dist/hello-world.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf dist",
+    "lint": "eslint .",
+    "lint:eslint:fix": "eslint --fix .",
+    "lint:fix": "npm run lint:eslint:fix"
+  },
+  "dependencies": {
+    "@lit/react": "^1.0.3",
+    "@web-components-monorepo-starter/hello-world": "*"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.5",
+    "@web-components-monorepo-starter/base-configs": "*",
+    "@web-components-monorepo-starter/eslint-config": "*",
+    "eslint": "^8.57.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}
