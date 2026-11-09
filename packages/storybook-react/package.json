@@ -6,16 +6,16 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.2.25",
+    "@chromatic-com/storybook": "^5.6.0",
     "@storybook/addon-essentials": "^8.0.3",
     "@storybook/addon-interactions": "^8.0.3",
-    "@storybook/addon-links": "^8.0.3",
-    "@storybook/addon-onboarding": "^8.0.3",
+    "@storybook/addon-links": "^10.6.6",
+    "@storybook/addon-onboarding": "^10.6.6",
     "@storybook/blocks": "^8.0.3",
-    "@storybook/react": "^8.0.3",
-    "@storybook/react-vite": "^8.0.3",
+    "@storybook/react": "^10.6.6",
+    "@storybook/react-vite": "^10.6.6",
     "@storybook/test": "^8.0.3",
     "@web-components-monorepo-starter/hello-world-react": "*",
-    "storybook": "^8.0.3"
+    "storybook": "^10.6.6"
   }
 }
